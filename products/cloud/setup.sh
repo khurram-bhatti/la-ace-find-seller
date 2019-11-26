@@ -62,14 +62,13 @@ gcloud beta container clusters create $PRODUCT_CLUSTER_NAME \
     --project $PROJECT_NAME \
     --zone $PROJECT_ZONE \
     --no-enable-basic-auth \
-    --cluster-version "1.9.7-gke.3" \
+    --cluster-version "1.13.11-gke.14" \
     --machine-type "n1-standard-1" \
     --image-type "COS" \
     --disk-type "pd-standard" \
     --disk-size "100" \
     --num-nodes "3" \
-    --enable-cloud-logging \
-    --enable-cloud-monitoring \
+    --enable-stackdriver-kubernetes \
     --network $SERVICES_NETWORK \
     --subnetwork $PRODUCT_SUBNET \
     --addons HorizontalPodAutoscaling,HttpLoadBalancing,KubernetesDashboard \
