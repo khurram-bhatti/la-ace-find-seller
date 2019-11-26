@@ -68,7 +68,8 @@ gcloud beta container clusters create $PRODUCT_CLUSTER_NAME \
     --disk-type "pd-standard" \
     --disk-size "100" \
     --num-nodes "3" \
-    --enable-stackdriver-kubernetes \
+    --enable-cloud-logging \
+    --enable-cloud-monitoring \
     --network $SERVICES_NETWORK \
     --subnetwork $PRODUCT_SUBNET \
     --addons HorizontalPodAutoscaling,HttpLoadBalancing,KubernetesDashboard \
